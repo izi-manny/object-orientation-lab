@@ -176,10 +176,8 @@ var user = {
 */
 
 //Code Here
-let {name: newName} = user;
-
-newName = 'Bryan G. Smith';
-console.log(newName)
+user.name = 'Bryan G. Smith';
+user.email = 'bryan.smith@devmounta.in'
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -187,7 +185,7 @@ console.log(newName)
 */
 
 //Code Here
-delete user.name
+delete user.age
 console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
@@ -413,7 +411,7 @@ class Motorcycle extends Vehicle{
   constructor(capacity, color, mileage, make, isCool){
     super(capacity, color, mileage)
     this.make = make,
-    this.isCool = false
+    this.isCool = isCool
   }
 }
 
@@ -456,7 +454,7 @@ class Boat extends Vehicle{
   }
 
   checkSeaworthiness(){
-    if (this.isSeaWorthy === true){
+    if (this.isSeaWorthy){
       console.log(`The ${this.color} ${this.type} ${this.name} is seaworthy!`)
     } else {
       console.log(`You need to get your ${this.type} in shape!`)
